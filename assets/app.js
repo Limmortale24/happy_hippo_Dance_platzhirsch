@@ -1,5 +1,6 @@
 // ======= KONFIGURATION =======
-const BACKEND_URL = Hallo.https://script.google.com/macros/s/AKfycby123456789/exec;
+const BACKEND_URL = "https://script.google.com/macros/s/AKfycby123456789/exec";
+
 
 // Ein Vote pro Gerät
 const STORAGE_KEY = "platzhirsch_vote_happyhippo_20260501";
