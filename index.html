@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Platzhirsch Lahr – Happy Hippo Dance Live</title>
+  <meta name="description" content="Abstimmung: Kommst du zum Event im Platzhirsch Lahr? Stimme jetzt ab und sichere dir dein Freigetränk!" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Platzhirsch Lahr</h1>
+      <p class="subtitle">Happy Hippo Dance Live · 01.05.2026</p>
+      <p class="sub">Scan · Informieren · Abstimmen · Freigetränk sichern</p>
+    </div>
+  </header>
+
+  <main class="container card">
+    <section class="event-info">
+      <h2>👋 Bist du dabei?</h2>
+      <p>
+        Quer durch alle Musikrichtungen. Für Essen & Getränke ist gesorgt. <strong>Kein Eintritt.</strong>
+        Alle, die hier abstimmen, erhalten einen <strong>Gutschein für ein Freigetränk bei der nächsten Veranstaltung</strong>.
+        Wer abstimmt und auch kommt, bekommt <strong>ein Getränk kostenlos vor Ort</strong>.
+      </p>
+      <ul class="facts">
+        <li><strong>Wann:</strong> Freitag, 01. Mai 2026, ab 20:00 Uhr</li>
+        <li><strong>Wo:</strong> Platzhirsch Lahr · Bistro · Kaffee · Bar</li>
+      </ul>
+    </section>
+
+    <form id="voteForm" class="form" novalidate>
+      <div class="field">
+        <label for="name">Dein Name *</label>
+        <input id="name" name="name" type="text" placeholder="Max Mustermann" required />
+        <small class="hint">Wir brauchen den Namen, um deine Teilnahme am Einlass zuzuordnen.</small>
+      </div>
+
+      <div class="field">
+        <label for="email">E-Mail *</label>
+        <input id="email" name="email" type="email" placeholder="max@example.com" required />
+        <small class="hint">Eine Abstimmung pro Person. Wir nutzen diese E-Mail nur für die Eventabwicklung.</small>
+      </div>
+
+      <div class="field">
+        <label for="phone">Telefon (optional)</label>
+        <input id="phone" name="phone" type="tel" placeholder="0151…" />
+      </div>
+
+      <fieldset class="field">
+        <legend>Deine Rückmeldung *</legend>
+        <label class="radio"><input type="radio" name="choice" value="ich_komme_sicher" required /> Ich komme sicher</label>
+        <label class="radio"><input type="radio" name="choice" value="eher_ja" /> Eher ja</label>
+        <label class="radio"><input type="radio" name="choice" value="eher_nein" /> Eher nein</label>
+        <label class="radio"><input type="radio" name="choice" value="ich_komme_nicht" /> Ich komme nicht</label>
+      </fieldset>
+
+      <div class="field consent">
+        <label class="checkbox">
+          <input type="checkbox" id="consent" required />
+          Ich bin damit einverstanden, dass meine Angaben zur Eventorganisation gespeichert werden.
+        </label>
+      </div>
+
+      <button id="submitBtn" class="btn" type="submit">Abstimmen</button>
+      <p id="status" class="status" role="status"></p>
+      <p class="legal">* Pflichtfelder · Eine Abstimmung pro Person</p>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a href="https://platzhirsch-lahr.de/" target="_blank" rel="noopener">platzhirsch-lahr.de</a>
+      <span>·</span>
+      <a href="#" id="privacyLink">Datenschutz</a>
+    </div>
+  </footer>
+
+  <dialog id="privacyDialog">
+    <article>
+      <h3>Datenschutz</h3>
+      <p>Wir speichern Name, E-Mail, (optional) Telefon, deine Auswahl und Zeitstempel ausschließlich zur
+      Durchführung dieser Veranstaltung und zur Ausgabe der Getränke-Gutscheine. Eine Weitergabe an Dritte findet nicht statt.</p>
+      <form method="dialog">
+        <button class="btn">Okay</button>
+      </form>
+    </article>
+  </dialog>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
