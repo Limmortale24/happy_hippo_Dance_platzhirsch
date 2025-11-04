@@ -1,0 +1,62 @@
+:root{
+  --bg:#0f1115;
+  --card:#151922;
+  --text:#e8ecf1;
+  --muted:#a5afbd;
+  --brand:#c7a24b;
+  --brand-strong:#b18e3a;
+  --ok:#2ea043;
+  --warn:#e3b341;
+  --err:#f85149;
+}
+
+/* Base: mobile-first, avoid iOS input zoom by keeping font-size >= 16px */
+html{font-size:16px;-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5}
+
+.container{max-width:840px;margin:0 auto;padding:20px}
+.hero{background:linear-gradient(180deg,#121622,rgba(18,22,34,0));border-bottom:1px solid #242938;padding-bottom:8px}
+.hero h1{margin:0;font-weight:800;letter-spacing:.5px;font-size:1.75rem}
+.subtitle{margin:.25rem 0 0 0;color:var(--brand);font-weight:700}
+.sub{margin:.25rem 0 0 0;color:var(--muted)}
+
+.card{background:var(--card);border:1px solid #242938;border-radius:16px;margin-top:16px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+
+.event-info h2{margin:0 0 .25rem 0;font-size:1.35rem}
+.facts{display:grid;gap:.25rem;padding-left:1rem;margin:.25rem 0 0 0}
+
+.form{display:grid;gap:16px}
+.field label{display:block;margin-bottom:.35rem;font-weight:600}
+input[type=text]{width:100%;padding:14px 14px;border:1px solid #2a3142;border-radius:12px;background:#0c1018;color:var(--text);min-height:48px}
+input:focus{outline:3px solid var(--brand);outline-offset:1px}
+
+fieldset{border:1px solid #2a3142;border-radius:12px;padding:12px}
+legend{padding:0 8px;color:var(--muted)}
+
+.radio, .checkbox{display:flex;gap:12px;align-items:center;padding:10px 0}
+.radio.touch, .checkbox.touch{padding:12px 0}
+.radio input[type=radio], .checkbox input[type=checkbox]{width:22px;height:22px}
+.radio{font-size:1.05rem}
+
+.btn{appearance:none;border:0;background:var(--brand);color:#120d02;padding:14px 18px;border-radius:12px;font-weight:800;cursor:pointer;min-height:48px;width:100%}
+.btn:active{transform:scale(0.995)}
+.btn:hover{background:var(--brand-strong)}
+
+.status{min-height:1.25rem;color:var(--muted);margin-top:6px}
+.status.ok{color:var(--ok)}
+.status.warn{color:var(--warn)}
+.status.err{color:var(--err)}
+
+.hint{color:var(--muted)}
+.legal{color:var(--muted);font-size:.95rem}
+
+.footer{color:var(--muted);border-top:1px solid #242938;margin-top:18px}
+.footgrid{display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap}
+
+/* Larger screens */
+@media (min-width: 640px){
+  .container{padding:24px}
+  .hero h1{font-size:2rem}
+  .card{padding:24px}
+}
